@@ -140,7 +140,126 @@
   line-height: 30px;
 }
 
-/* .reservation {} */
+/* NOTE: while i could have done this section with less lines or less
+complexity, i wanted to practice options and workarounds */
+
+.reservation {
+  /* the brief wants size-cover but the design uses contain  */
+  background: center / cover no-repeat #d9e7ff
+    url(../images/background_reservation.svg);
+  /* I used flex to center the title with the form,
+    margin auto on title will not work
+    a better way would be just using text-align: center; */
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 120px;
+}
+
+.reservation__title {
+  /* the margin auto only worked with flex
+  because in a flex container
+  margin auto will work with out
+  needing a width */
+  margin: 0 auto 80px;
+  /* text-align: center; */
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  color: #000;
+}
+
+.reservation__form {
+  margin: 0 auto;
+}
+
+.form {
+  max-width: 385px;
+  /* flex items only grow as wide as their content
+  duo to max-width taking place
+  so i needed 100% width */
+  width: 100%;
+}
+
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  /* or display: block; on .form__input
+  but then the input is no longer a flex item,
+  it will not stretch
+  and so i will need
+  width: 100%;
+  box-sizing: border-box;
+  on the .form__input*/
+  display: flex;
+  flex-direction: column;
+  /* flex items by default will stretch
+   to fill the container’s width
+   but only if they don’t have
+   a set width or max-width that limits them. */
+}
+
+.form__input {
+  border-radius: 4px;
+  color: #000;
+  margin: 8px 0 32px;
+  padding: 15px 20px;
+  border: 1px solid #838383;
+  display: block;
+  /* width: 100%;
+  box-sizing: border-box; */
+}
+
+input::placeholder {
+  font-size: 20px;
+  line-height: 30px;
+  color: #838383;
+}
+
+.form__button {
+  border-radius: 4px;
+  background-color: #1878dc;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 32px;
+  padding: 20px 0;
+  border: none;
+  /* 100% width is needed,
+  this is not a flex item thus it will not stretch */
+  width: 100%;
+}
+
+.form__button:hover {
+  background-color: #3f96f3;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form__checkbox {
+  border-radius: 2px;
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+.form__label_type_checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form__checkbox[type="checkbox"] {
+  background-color: #1878dc;
+  background-image: url(../images/checkbox.svg);
+}
 
 /* .menu {} */
 
