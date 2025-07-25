@@ -10,7 +10,6 @@
       content="This is the second project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the design brief."
     />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <title>Coffee Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -107,7 +106,6 @@
         </section>
         <section class="reservation" id="reservation">
           <h2 class="reservation__title">Book a table</h2>
-
           <form class="form reservation__form">
             <fieldset class="form__fieldset">
               <label for="name" class="form__label">
@@ -151,6 +149,7 @@
             <button class="form__button">Book a table</button>
             <label for="terms" class="form__label form__label_type_checkbox">
               <input type="checkbox" id="terms" class="form__checkbox" />
+              <span class="form__checkbox-icon"></span>
               I agree with the terms of use
             </label>
           </form>
