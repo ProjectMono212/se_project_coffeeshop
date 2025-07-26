@@ -13,7 +13,7 @@
 .nav__links {
   display: flex;
   list-style-type: none;
-  align-items: center;
+  /* align-items: center; */
   margin: 0;
   padding: 0;
   column-gap: 20px;

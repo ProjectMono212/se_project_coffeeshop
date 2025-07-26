@@ -31,6 +31,11 @@
 }
 
 .form__input {
+  /* NOTE: The brief did not give input height */
+  min-height: 60px;
+  /* border-box tells the browser to account for any border and padding
+  in the values you specify for an element's width and height. */
+  box-sizing: border-box;
   border-radius: 4px;
   color: #000;
   margin: 8px 0 32px;
@@ -71,6 +76,7 @@
   margin-right: 12px;
   width: 20px;
   height: 20px;
+  border: 1px solid #838383;
 }
 
 .form__label_type_checkbox {
@@ -87,6 +93,11 @@
 }
 
 .form__checkbox-icon {
+  /* NOTE (To Reviewer): I do not think we are following the same design and brief. the brief i follow states:
+   "You can keep the standard checked styles for it. But if you want to challenge
+   yourself, you can style it as follows: set the background color to #1878DC, ...."
+   Im a little confused about this, as some of the points you mentioned are not in the design nor the brief.
+   otherwise, i have learned so much from your review, Thank you :D */
   background-color: #1878dc;
   background-repeat: no-repeat;
   background-position: center;
@@ -98,4 +109,5 @@
 
 .form__checkbox[type="checkbox"]:checked + .form__checkbox-icon {
   background-image: url(../images/check.svg);
+  background-color: #2f80ed;
 }

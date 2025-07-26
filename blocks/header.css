@@ -2,9 +2,14 @@
   padding: 30px 80px 40px;
   background: center / cover no-repeat #fff url(../images/background_header.svg);
   height: 800px;
+  /* duo to height & padding i needed box-sizing */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
+  /*  give that element a negative z-index,
+  and then give the positive z-index to the parent to create a stacking context */
 }
 
 .header__image {
@@ -13,6 +18,7 @@
   top: 124px;
   width: 646px;
   height: 568px;
+  z-index: -1;
 }
 
 .header__title {
@@ -30,6 +36,8 @@
   font-style: italic;
   font-family: "Noto Serif", "Times New Roman", serif;
   color: #3f96f3;
+  /* I need to check the dev tools, the font weight was 500 and i needed 400 */
+  font-weight: 400;
 }
 
 .header__description {
