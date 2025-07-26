@@ -61,6 +61,8 @@
 
 .form__button:hover {
   background-color: #3f96f3;
+  opacity: 70%;
+  transition: opacity 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
